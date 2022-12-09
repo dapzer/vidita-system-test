@@ -1,3 +1,19 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "semi": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/quotes": [
+      "off",
+      "single"
+    ],
+    "@typescript-eslint/dot-notation": "off"
+  }
 }
