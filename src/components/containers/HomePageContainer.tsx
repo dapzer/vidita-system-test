@@ -12,7 +12,7 @@ const HomePageContainer: FC<Props> = () => {
 
   return (
     <div>
-      <h1>Work!</h1>
+      <h1>Таблица продуктов</h1>
       <Search />
       <UiDetails title={"Показать таблицу"} activeTitle={"Свернуть таблицу"} isOpenedDefault >
         <ProductsTable/>
