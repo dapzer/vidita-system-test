@@ -33,7 +33,7 @@ const ProductsItem: FC<Props> = ({ product }) => {
         <UiCheckbox checkedStatus={isChecked} changeChecked={handleChecked} />
       </td>
       <td>{product.status}</td>
-      <td>{product.sum}</td>
+      <td>{toCurrency(product.sum, product.currency, "ru")}</td>
       <td>{product.qty}</td>
       <td>{product.volume}</td>
       <td>{product.name}</td>
