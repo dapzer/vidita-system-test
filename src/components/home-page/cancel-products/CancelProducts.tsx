@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import UiPrompt from "../../ui/prompt/UiPrompt";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { postCancelProduct } from "../../../redux/features/products/productsThunk";
-import { Product } from "../../../types/Product";
+import styles from "./cancel-products.module.scss"
 
 interface Props {
 
@@ -21,7 +21,7 @@ const CancelProducts: FC<Props> = () => {
         <UiPrompt title={"Вы уверены что хотите аннулировать товар(ы)"} callBack={cancelProducts}>
           <ul>
             {selectedProducts.map((el) => (
-              <li key={`seleted-ids-${el}`}>{baseProducts[baseProducts.findIndex((value) => value.id === el)].name}</li>
+              <li key={`seleted-ids-${el}`} className={styles['product']}>{baseProducts[baseProducts.findIndex((value) => value.id === el)].name}</li>
             ))}
           </ul>
         </UiPrompt>
