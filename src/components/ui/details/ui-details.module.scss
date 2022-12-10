@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+
+.toggle_btn {
+  background: $background;
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: sticky;
+  z-index: 25;
+  top: 0;
+  border: none !important;
+  justify-content: space-between !important;
+  margin-bottom: 20px !important;
+  font-size: $h3 !important;
+  border-bottom: 2px solid $text !important;
+  border-radius: unset;
+
+  @media screen and (max-width: $sm){
+    font-size: $p !important;
+  }
+  svg {
+    width: $span;
+    rotate: 180deg;
+    height: $span;
+  }
+}
+
+.content {
+  padding-top: 15px;
+}
+
+.arrow_active {
+  rotate: 0deg !important;
+}

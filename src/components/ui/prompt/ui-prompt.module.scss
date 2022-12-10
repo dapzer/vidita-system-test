@@ -1,0 +1,74 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.prompt {
+  padding-top: 20px;
+}
+
+.body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .6);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &[hidden] {
+    display: none !important;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    @include fullWidthBg($background);
+    z-index: 1000;
+    padding-top: 20px;
+
+    button {
+      background: none;
+      border:none;
+      cursor: pointer;
+    }
+  }
+
+  .frame {
+    margin: 0 auto;
+    background: $background;
+    padding: 20px;
+    padding-top: 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: $borderRadius;
+
+    &_fullWidth {
+      width: 100% !important;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+
+  button {
+    border: none;
+  }
+
+  .confirm {
+    background: green;
+  }
+
+  .cancel {
+    background: red;
+  }
+}

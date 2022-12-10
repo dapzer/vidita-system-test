@@ -1,10 +1,11 @@
 export interface Product {
-  id: string,
+  id: number,
   status: string, // {‘active’, ‘archive’}
   sum: number,
   qty: number,
   volume: number,
   name: string,
   delivery_date: string,
-  currency: string
+  currency: string,
+  total_sum?: number
 }

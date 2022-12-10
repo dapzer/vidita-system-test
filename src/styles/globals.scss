@@ -130,6 +130,7 @@ a {
   }
 }
 
+select,
 input {
   text-decoration: none;
   outline: none;
@@ -141,6 +142,13 @@ input {
   border-radius: 5px;
   margin-bottom: 15px;
 
+  &:disabled {
+    border-color: #838383FF;
+  }
+}
+
+option {
+  color: #000;
 }
 
 .container {

@@ -1,0 +1,17 @@
+@import "src/styles/variables";
+
+.table {
+  color: $secondary;
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    text-align: left;
+    background: $accent;
+  }
+
+  td, th {
+    padding: 10px;
+    border: 1px solid $secondary;
+  }
+}
