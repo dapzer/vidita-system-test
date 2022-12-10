@@ -10,7 +10,7 @@ interface Props {
 
 const CancelProducts: FC<Props> = () => {
   const dispatch = useAppDispatch()
-  const {selectedProducts, baseProducts} = useAppSelector(state => state.products)
+  const { selectedProducts, baseProducts } = useAppSelector(state => state.products)
   const cancelProducts = () => {
     dispatch(postCancelProduct(selectedProducts))
   }

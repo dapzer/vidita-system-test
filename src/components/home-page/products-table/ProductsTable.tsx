@@ -12,7 +12,7 @@ interface Props {
 
 const ProductsTable: FC<Props> = () => {
   const dispatch = useAppDispatch()
-  const {sortedProducts, selectedProducts} = useAppSelector((state) => state.products)
+  const { sortedProducts, selectedProducts } = useAppSelector((state) => state.products)
   const [isAllSelected, setIsAllSelected] = useState(false)
 
   useEffect(() => {

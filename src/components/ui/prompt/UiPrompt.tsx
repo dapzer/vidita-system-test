@@ -8,7 +8,7 @@ interface Props {
   callBack: () => void
 }
 
-const UiPrompt: FC<Props> = ({title, children, callBack}) => {
+const UiPrompt: FC<Props> = ({ title, children, callBack }) => {
   const [visible, setVisible ] = useState(false)
 
   const confirm = () => {
@@ -30,7 +30,7 @@ const UiPrompt: FC<Props> = ({title, children, callBack}) => {
           </UiPromptContent>
         )}
       </div>
-    );
-  };
+  );
+};
 
-  export default UiPrompt;
+export default UiPrompt;

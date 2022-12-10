@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Footer: FC<Props> = () => {
-  const {totalVolume, totalQty} = useAppSelector(state => state.products)
+  const { totalVolume, totalQty } = useAppSelector(state => state.products)
   return (
     <footer className={styles['body']}>
       <div className={'container'}>

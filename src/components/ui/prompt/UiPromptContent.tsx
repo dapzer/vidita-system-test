@@ -10,7 +10,7 @@ interface Props {
 
 }
 
-const UiPromptContent: FC<Props> = ({title, children, maxWidth, handleVisible}) => {
+const UiPromptContent: FC<Props> = ({ title, children, maxWidth, handleVisible }) => {
   const closeModalOnKeypress = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       handleVisible(false);

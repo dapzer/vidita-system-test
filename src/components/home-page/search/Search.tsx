@@ -15,7 +15,7 @@ const Search: FC<Props> = () => {
 
   useEffect(() => {
     if (selectedField === "") return
-    dispatch(searchByField({field: selectedField, value: searchTern}))
+    dispatch(searchByField({ field: selectedField, value: searchTern }))
   }, [searchTern])
 
   const changeStatus = (value: string) => {

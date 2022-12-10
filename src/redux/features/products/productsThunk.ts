@@ -25,7 +25,7 @@ export const postCancelProduct = createAsyncThunk(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        selectedProducts
+        selectedProducts,
       }),
     });
 

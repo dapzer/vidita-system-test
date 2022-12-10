@@ -15,7 +15,7 @@ const initialState: ProductsState = {
   sortedProducts: [],
   selectedProducts: [],
   totalVolume: 0,
-  totalQty: 0
+  totalQty: 0,
 };
 
 export const productsSlice = createSlice({
@@ -43,14 +43,14 @@ export const productsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchAllProducts.fulfilled, (state: ProductsState, {payload}) => {
+    builder.addCase(fetchAllProducts.fulfilled, (state: ProductsState, { payload }) => {
       if (!payload || payload.length < 1) return
       let modifyProducts: Product[] = payload.map((el, index) => {
         state.totalVolume += el.volume
         state.totalQty += el.qty
         return {
           ...el,
-          total_sum: el.sum + el.qty
+          total_sum: el.sum + el.qty,
         }
       })
       modifyProducts = [...state.baseProducts, ...modifyProducts]

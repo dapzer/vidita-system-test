@@ -6,14 +6,14 @@ interface Props {
 }
 
 const Header: FC<Props> = () => {
-    return (
+  return (
       <>
         <Link href={'/'}>
           Главная
         </Link>
       </>
-    );
-  }
+  );
+}
 ;
 
 export default Header;

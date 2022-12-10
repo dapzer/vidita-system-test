@@ -1,34 +1,34 @@
 export const tableFields = [
   {
     title: "Статус",
-    value: "status"
+    value: "status",
   },
   {
     title: "Цена",
-    value: "sum"
+    value: "sum",
   },
   {
     title: "Количество",
-    value: "qty"
+    value: "qty",
   },
   {
     title: "Вес",
-    value: "volume"
+    value: "volume",
   },
   {
     title: "Название",
-    value: "name"
+    value: "name",
   },
   {
     title: "Дата доставки",
-    value: "delivery_date"
+    value: "delivery_date",
   },
   {
     title: "Валюта",
-    value: "currency"
+    value: "currency",
   },
   {
     title: "Общая стоимость",
-    value: "total_sum"
+    value: "total_sum",
   },
 ]

@@ -8,7 +8,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Layout: FC<Props> = ({children}) => {
+const Layout: FC<Props> = ({ children }) => {
   const dispatch = useAppDispatch()
   useEffect(() => {
     dispatch(fetchAllProducts("documentsFirst"))

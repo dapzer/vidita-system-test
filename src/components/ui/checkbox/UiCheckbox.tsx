@@ -6,7 +6,7 @@ interface Props {
   changeChecked: () => void
 }
 
-const UiCheckbox: FC<Props> = ({checkedStatus, changeChecked}) => {
+const UiCheckbox: FC<Props> = ({ checkedStatus, changeChecked }) => {
   return (
     <div className={styles['body']} onClick={changeChecked}>
       <input type="checkbox" name="checkbox" checked={checkedStatus} readOnly />

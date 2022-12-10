@@ -9,12 +9,12 @@ interface Props {
   isOpenedDefault?: boolean;
 }
 
-const UiDetails: FC<Props> = ({children, title, activeTitle, btnClass, isOpenedDefault}) => {
+const UiDetails: FC<Props> = ({ children, title, activeTitle, btnClass, isOpenedDefault }) => {
   const [isOpen, setIsOpen] = useState(isOpenedDefault ? isOpenedDefault : false);
 
   return (
     <div>
-      <button className={`${styles['toggle_btn']} ${btnClass}`} onClick={(e) => setIsOpen(!isOpen)}>
+      <button className={`${styles['toggle_btn']} ${btnClass}`} onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? activeTitle : title}
         <svg className={`${isOpen && styles['arrow_active']}`}>
           <use href="/icon-arrow.svg#svg"></use>

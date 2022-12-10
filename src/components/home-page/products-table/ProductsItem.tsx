@@ -10,7 +10,7 @@ interface Props {
   product: Product
 }
 
-const ProductsItem: FC<Props> = ({product}) => {
+const ProductsItem: FC<Props> = ({ product }) => {
   const dispatch = useAppDispatch()
   const [isChecked, setIsChecked] = useState(false)
   const selectedProducts = useAppSelector((state) => state.products.selectedProducts)
@@ -24,7 +24,7 @@ const ProductsItem: FC<Props> = ({product}) => {
   }, [selectedProducts])
 
   const handleChecked = () => {
-    dispatch(changeProductSelectedStatus({selected: isChecked, id: product.id}))
+    dispatch(changeProductSelectedStatus({ selected: isChecked, id: product.id }))
   }
 
   return (
