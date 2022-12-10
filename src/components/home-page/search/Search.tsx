@@ -28,7 +28,7 @@ const Search: FC<Props> = () => {
       <select onChange={(e) => changeStatus(e.target.value)}>
         <option  value={""}>Выберите колонку</option>
         {tableFields.map((el, index) => (
-          <option key={index} value={el.value}>{el.title}</option>
+          <option key={`column-option-${index}`} value={el.value}>{el.title}</option>
         ))}
       </select>
       <input disabled={selectedField === ""} type="text" onChange={(e) => setSearchTern(e.target.value)} value={searchTern} placeholder="Поиск" />

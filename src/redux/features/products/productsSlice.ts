@@ -23,7 +23,6 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
     searchByField: (state, action) => {
-      console.log(action.payload)
       state.sortedProducts = state.baseProducts.filter((el) => el[action.payload.field as keyof Product]?.toLocaleString().includes(action.payload.value))
     },
     changeProductSelectedStatus: (state, action) => {
