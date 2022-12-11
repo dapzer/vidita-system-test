@@ -2,3 +2,10 @@
 .product {
   color: $secondary;
 }
+
+.list_title {
+  p {
+    color: $secondary;
+    padding-bottom: 15px;
+  }
+}

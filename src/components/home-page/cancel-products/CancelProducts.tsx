@@ -18,8 +18,9 @@ const CancelProducts: FC<Props> = () => {
   return (
     <>
       {selectedProducts.length > 0 && (
-        <UiPrompt title={"Вы уверены что хотите аннулировать товар(ы)"} callBack={cancelProducts}>
+        <UiPrompt title={"Аннулировать"} callBack={cancelProducts}>
           <ul>
+            <li className={styles['list_title']}><p>Вы уверены что хотите аннулировать товар(ы)</p></li>
             {selectedProducts.map((el) => (
               <li key={`selected-ids-${el}`} className={styles['product']}>{baseProducts[baseProducts.findIndex((value) => value.id === el)].name}</li>
             ))}

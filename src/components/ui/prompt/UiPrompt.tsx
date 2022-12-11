@@ -21,7 +21,7 @@ const UiPrompt: FC<Props> = ({ title, children, callBack }) => {
       <div className={styles['prompt']}>
         <button onClick={() => setVisible(true)}>{title}</button>
         {visible && (
-          <UiPromptContent handleVisible={setVisible} title={"Аннулировать"} maxWidth={500}>
+          <UiPromptContent handleVisible={setVisible} title={title} maxWidth={500}>
             {children}
             <div className={styles['buttons']}>
               <button className={styles['confirm']} onClick={confirm}>Подтвердить</button>
