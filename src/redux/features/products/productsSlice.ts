@@ -23,7 +23,7 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
     searchByField: (state, action) => {
-      state.sortedProducts = state.baseProducts.filter((el) => el[action.payload.field as keyof Product]?.toLocaleString().includes(action.payload.value))
+      state.sortedProducts = state.baseProducts.filter((el) => el[action.payload.field as keyof Product]?.toString().includes(action.payload.value))
     },
     changeProductSelectedStatus: (state, action) => {
       if (!action.payload.selected) {
@@ -49,7 +49,7 @@ export const productsSlice = createSlice({
         state.totalQty += el.qty
         return {
           ...el,
-          total_sum: el.sum + el.qty,
+          total_sum: el.sum * el.qty,
         }
       })
       modifyProducts = [...state.baseProducts, ...modifyProducts]
